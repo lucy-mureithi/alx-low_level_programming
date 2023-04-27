@@ -7,7 +7,7 @@
 */
 
 void print_alphabet(void);
-main()
+
 {
 	char c;
 
