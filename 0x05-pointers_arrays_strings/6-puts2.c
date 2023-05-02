@@ -8,16 +8,24 @@
 
 void puts2(char *str)
 {
-int i;
-int j;
+int longi = 0;
+int j = 0;
+char *y = str;
+int p;
 
-while (str[j] != '\0')
+while (*y != '\0')
 {
-j++;
+y++;
+longi++;
 }
-for (i = 0; i < j; i += 2)
+j = longi - 1;
+
+for (p = 0; p <= j; p++)
 {
-_putchar(str[i]);
+if (p % 2 == 0)
+{
+_putchar(str[p]);
+}
 }
 _putchar('\n');
 }
