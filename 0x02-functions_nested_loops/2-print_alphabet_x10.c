@@ -1,26 +1,21 @@
 #include "main.h"
 
 /**
- * print_alphabet - print 10 times the alphabet.
- *@ch: char to be checked
- * Description: lowercase followed by new line.
+ * print_alphabet - print 10 times the alphabet
+ * @c: char to be checked
+ * Description: lowercase, followed by a new line
  * Return: 0
  */
 
 void print_alphabet_x10(void)
 {
-char ch;
-int i;
+int i = 0;
+char c;
 
-i = 0;
-while (i < 10)
+while (i++ <= 9)
 {
-ch = 'a';
-while (ch <= 'z')
-{
-_putchar (ch);
-ch++;
-}
+for (c = 'a'; c <= 'z'; c++)
+_putchar(c);
 _putchar('\n');
 }
 }
