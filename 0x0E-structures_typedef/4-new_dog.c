@@ -2,31 +2,48 @@
 #include "dog.h"
 
 /**
- * _stren - return the length of string
- * @s: string to evaluate
- * Return: length
+ * new_dog - create new dog
+ * @name: member 1
+ * @age: member 2
+ * @owner: member 3
+ * Return: NULL
  */
-
-int _stren(char *s)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-int i = 0;
-while (s[i] != '\0')
-{
-i++;
-}
-return (i);
-}
+int i, lenN, lenO;
+struct dog *n_dog = NULL;
+lenN = 0;
+while (name[lenN] != '\0')
+	leN++;
+lenO = 0;
+while (owner[lenO] != '\0')
+	lenO++;
 
-/**
- * _strcpy - copy pointed string to src
- * include terminating null byte
- * @dest: pointer to copy string
- * @src: pointer copied
- * Return: dest
- */
-
-char *_strcpy(char  *dest, char *src)
-{
-int len, i;
-
+n_dog = malloc(sizeof(struct dog));
+		if (n_dog == NULL)
+		{
+			free(n_dog);
+			return (NULL);
+		}
+		n_dog->dogname = malloc(lenN = 1);
+		if (n_dog->name == NULL)
+		{
+			free(n_dog->name);
+			free(n_dog);
+			return (NULL);
+		}
+		n_dog->owner = malloc(lenO = 1);
+		if (n_dog->owner == NULL)
+		{
+			free(n_dog->name);
+			free(n_dog->owner);
+			free(n_dog);
+			return (NULL);
+		}
+		for (i = 0; i <= lenN; i++)
+			n_dog->name[i] = name[i];
+		for (i = 0; i <= lenO; i++)
+			n_dog->owner[i] = owner[i];
+		n_dog->age = age;
+		return (n_dog);
 }
