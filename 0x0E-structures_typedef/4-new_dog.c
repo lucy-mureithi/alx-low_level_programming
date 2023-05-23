@@ -25,14 +25,14 @@ n_dog = malloc(sizeof(struct dog));
 			free(n_dog);
 			return (NULL);
 		}
-		n_dog->dogname = malloc(lenN = 1);
+		n_dog->dogname = malloc(lenN + 1);
 		if (n_dog->name == NULL)
 		{
 			free(n_dog->name);
 			free(n_dog);
 			return (NULL);
 		}
-		n_dog->owner = malloc(lenO = 1);
+		n_dog->owner = malloc(lenO + 1);
 		if (n_dog->owner == NULL)
 		{
 			free(n_dog->name);
