@@ -21,7 +21,7 @@ if (p == NULL)
 while (i < l)
 {
 	p[i] = 0;
-	p++;
+	i++;
 }
 return (p);
 }
